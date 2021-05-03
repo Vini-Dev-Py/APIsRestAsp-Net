@@ -58,6 +58,5 @@ namespace RestApisWithAspNet.Controllers
             _personService.Delete(id);
             return NoContent();
         }
-
     }
 }
