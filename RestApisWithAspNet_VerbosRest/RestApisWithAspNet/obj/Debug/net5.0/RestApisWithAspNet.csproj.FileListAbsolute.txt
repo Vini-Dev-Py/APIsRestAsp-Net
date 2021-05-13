@@ -85,3 +85,13 @@ C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_VerbosRest\RestApi
 C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_VerbosRest\RestApisWithAspNet\obj\Debug\net5.0\ref\RestApisWithAspNet.dll
 C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_VerbosRest\RestApisWithAspNet\obj\Debug\net5.0\RestApisWithAspNet.pdb
 C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_VerbosRest\RestApisWithAspNet\obj\Debug\net5.0\RestApisWithAspNet.genruntimeconfig.cache
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_VerbosRest\RestApisWithAspNet\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_VerbosRest\RestApisWithAspNet\bin\Debug\net5.0\Microsoft.Bcl.HashCode.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_VerbosRest\RestApisWithAspNet\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_VerbosRest\RestApisWithAspNet\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_VerbosRest\RestApisWithAspNet\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_VerbosRest\RestApisWithAspNet\bin\Debug\net5.0\MySqlConnector.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_VerbosRest\RestApisWithAspNet\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_VerbosRest\RestApisWithAspNet\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_VerbosRest\RestApisWithAspNet\bin\Debug\net5.0\Pomelo.JsonObject.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_VerbosRest\RestApisWithAspNet\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll

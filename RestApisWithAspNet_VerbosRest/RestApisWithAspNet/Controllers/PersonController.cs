@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using RestApisWithAspNet.Model;
 using RestApisWithAspNet.Services;
 
 namespace RestApisWithAspNet.Controllers
 {
+    [ApiVersion("1.0")]
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/[controller]/v{version:apiVersion}")]
     public class PersonController : ControllerBase
     {
 
@@ -38,25 +36,28 @@ namespace RestApisWithAspNet.Controllers
             return Ok(person);
         }
 
-        [HttpPost]
+        [HttpPost("index/")]
         public IActionResult Create([FromBody] Person person)
         {
             if (person == null) return BadRequest();
             return Ok(_personService.Create(person));
         }
 
-        [HttpPut]
+        [HttpPut("index/{id}")]
         public IActionResult Update([FromBody] Person person)
         {
             if (person == null) return BadRequest();
             return Ok(_personService.Update(person));
         }
 
+        
+
         [HttpDelete("index/{id}")]
         public IActionResult Delete(long id)
         {
             _personService.Delete(id);
-            return NoContent();
+
+            return Ok($"Person number {id} successfully deleted");
         }
     }
 }

@@ -9,62 +9,84 @@ namespace RestApisWithAspNet.Services.Implementations
 {
     public class PersonServiceImplementation : IPersonService
     {
-        private volatile int count;
+        private DBContext _context;
 
-        public Person Create(Person person)
+        public PersonServiceImplementation(DBContext context)
         {
-            return person;
+            _context = context;
         }
-
-        public void Delete(long id)
-        {
-
-        }
-
+        // Method responsible for returning all people,
         public List<Person> FindAll()
         {
-            List<Person> people = new List<Person>();
-
-            for (int i = 0; i < 8; i++)
-            {
-                Person person = MockPerson(i);
-                people.Add(person);
-            }
-
-            return people;
+            return _context.People.ToList();
         }
 
+        // Method responsible for returning one person by ID
         public Person FindByID(long id)
         {
-            return new Person
-            {
-                Id = IncrimentAndGet(),
-                FirstName = "Vinicius",
-                LastName = "Batista",
-                Address = "Sumaré - São Paulo - Brasil",
-                Gender = "Male"
-            };
+            return _context.People.SingleOrDefault(p => p.Id.Equals(id));
         }
 
-        public Person Update(Person person)
+        // Method responsible to crete one new person
+        public Person Create(Person person)
         {
+            try
+            {
+                _context.Add(person);
+                _context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
             return person;
         }
-        private Person MockPerson(int i)
+
+        // Method responsible for updating one person
+        public Person Update(Person person)
         {
-            return new Person
+            // We check if the person exists in the database
+            // If it doesn't exist we return an empty person instance
+            if (!Exists(person.Id)) return new Person();
+
+            // Get the current status of the record in the database
+            var result = _context.People.SingleOrDefault(p => p.Id.Equals(person.Id));
+            if (result != null)
             {
-                Id = IncrimentAndGet(),
-                FirstName = "Vinicius",
-                LastName = "Batista",
-                Address = "Sumaré - São Paulo - Brasil",
-                Gender = "Male"
-            };
+                try
+                {
+                    // set changes and save
+                    _context.Entry(result).CurrentValues.SetValues(person);
+                    _context.SaveChanges();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            return person;
         }
 
-        private long IncrimentAndGet()
+        // Method responsible for deleting a person from an ID
+        public void Delete(long id)
         {
-            return Interlocked.Increment(ref count);
+            var result = _context.People.SingleOrDefault(p => p.Id.Equals(id));
+            if (result != null)
+            {
+                try
+                {
+                    _context.People.Remove(result);
+                    _context.SaveChanges();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+        }
+        private bool Exists(long id)
+        {
+            return _context.People.Any(p => p.Id.Equals(id));
         }
     }
 }

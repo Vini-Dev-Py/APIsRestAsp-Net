@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using RestApisWithAspNet.Model;
 using RestApisWithAspNet.Services;
 using RestApisWithAspNet.Services.Implementations;
 
@@ -31,8 +33,14 @@ namespace RestApisWithAspNet
 
             services.AddControllers();
 
+            var connection = Configuration["MySQLConnection:MySQLConnectionString"];
+
+            services.AddDbContext<DBContext>(options => options.UseMySql(connection));
+
+            services.AddApiVersioning();
+
             // Dependecy Injection
-            services.AddScoped<IPersonService, PersonServiceImplementation>();
+                services.AddScoped<IPersonService, PersonServiceImplementation>();
 
             services.AddSwaggerGen(c =>
             {
