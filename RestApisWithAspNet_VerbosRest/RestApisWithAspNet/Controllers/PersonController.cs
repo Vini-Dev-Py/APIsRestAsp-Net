@@ -58,6 +58,7 @@ namespace RestApisWithAspNet.Controllers
             _personService.Delete(id);
 
             return Ok($"Person number {id} successfully deleted");
+
         }
     }
 }

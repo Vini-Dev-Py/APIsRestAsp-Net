@@ -40,7 +40,7 @@ namespace RestApisWithAspNet
             services.AddApiVersioning();
 
             // Dependecy Injection
-                services.AddScoped<IPersonService, PersonServiceImplementation>();
+            services.AddScoped<IPersonService, PersonServiceImplementation>();
 
             services.AddSwaggerGen(c =>
             {
