@@ -1,0 +1,1 @@
+﻿INSERT INTO `myrestapi_aspnet`.`person` VALUES (1,'Vinicius','Batista','São Paulo','M')

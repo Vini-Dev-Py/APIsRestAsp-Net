@@ -134,3 +134,15 @@ C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Cam
 C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\obj\Debug\net5.0\ref\RestApisWithAspNet.dll
 C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\obj\Debug\net5.0\RestApisWithAspNet.pdb
 C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\obj\Debug\net5.0\RestApisWithAspNet.genruntimeconfig.cache
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\bin\Debug\net5.0\Evolve.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\bin\Debug\net5.0\Serilog.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\bin\Debug\net5.0\Serilog.AspNetCore.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\bin\Debug\net5.0\Serilog.Extensions.Hosting.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\bin\Debug\net5.0\Serilog.Extensions.Logging.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\bin\Debug\net5.0\Serilog.Formatting.Compact.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\bin\Debug\net5.0\Serilog.Settings.Configuration.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\bin\Debug\net5.0\Serilog.Sinks.Console.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\bin\Debug\net5.0\Serilog.Sinks.Debug.dll
+C:\Programação\NewGitHub\APIsRestAsp-Net\RestApisWithAspNet_Aplicação em Camadas\RestApisWithAspNet\bin\Debug\net5.0\Serilog.Sinks.File.dll
