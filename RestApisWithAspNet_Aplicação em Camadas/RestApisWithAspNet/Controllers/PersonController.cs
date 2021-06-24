@@ -6,7 +6,7 @@ using RestApisWithAspNet.Business;
 
 namespace RestApisWithAspNet.Controllers
 {
-    [ApiVersion("1.0")]
+    [ApiVersion("1")]
     [ApiController]
     [Route("api/[controller]/v{version:apiVersion}")]
     public class PersonController : ControllerBase
@@ -22,43 +22,39 @@ namespace RestApisWithAspNet.Controllers
             _personBusiness = personBusiness;
         }
 
-        [HttpGet("index/")]
-        public IActionResult GetIndex()
+        [HttpGet]
+        public IActionResult Get()
         {
             return Ok(_personBusiness.FindAll());
         }
 
-        [HttpGet("index/{id}")]
-        public IActionResult GetPersonByID(long id)
+        [HttpGet("{id}")]
+        public IActionResult Get(long id)
         {
             var person = _personBusiness.FindByID(id);
             if (person == null) return NotFound();
             return Ok(person);
         }
 
-        [HttpPost("index/")]
-        public IActionResult Create([FromBody] Person person)
+        [HttpPost]
+        public IActionResult Post([FromBody] Person person)
         {
             if (person == null) return BadRequest();
             return Ok(_personBusiness.Create(person));
         }
 
-        [HttpPut("index/{id}")]
-        public IActionResult Update([FromBody] Person person)
+        [HttpPut]
+        public IActionResult Put([FromBody] Person person)
         {
             if (person == null) return BadRequest();
             return Ok(_personBusiness.Update(person));
         }
 
-        
-
-        [HttpDelete("index/{id}")]
+        [HttpDelete("{id}")]
         public IActionResult Delete(long id)
         {
             _personBusiness.Delete(id);
-
-            return Ok($"Person number {id} successfully deleted");
-
+            return NoContent();
         }
     }
 }

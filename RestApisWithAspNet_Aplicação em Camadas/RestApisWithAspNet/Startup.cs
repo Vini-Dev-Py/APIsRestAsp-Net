@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
-using RestApisWithAspNet.Model;
+using RestApisWithAspNet.Model.Context;
 using RestApisWithAspNet.Business;
-using RestApisWithAspNet.Repository;
-using RestApisWithAspNet.Repository.Implementations;
 using RestApisWithAspNet.Business.Implementations;
+using RestApisWithAspNet.Repository;
 using Serilog;
 using System;
 using System.Collections.Generic;
+using RestApisWithAspNet.Repository.Generic;
+using Microsoft.OpenApi.Models;
 
 namespace RestApisWithAspNet
 {
@@ -50,7 +50,9 @@ namespace RestApisWithAspNet
 
             // Dependecy Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
-            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
+            services.AddScoped<IBookBusiness, BookBusinessImplementation>();
+
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 
             services.AddSwaggerGen(c =>
             {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RestApisWithAspNet.Model
+namespace RestApisWithAspNet.Model.Context
 {
     public class DBContext : DbContext
     {
@@ -16,5 +16,6 @@ namespace RestApisWithAspNet.Model
         public DBContext(DbContextOptions<DBContext> options) : base(options) {}
 
         public DbSet<Person> People { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
 }
