@@ -12,7 +12,6 @@ using Serilog;
 using System;
 using System.Collections.Generic;
 using RestApisWithAspNet.Repository.Generic;
-using Microsoft.OpenApi.Models;
 
 namespace RestApisWithAspNet
 {
@@ -39,7 +38,7 @@ namespace RestApisWithAspNet
 
             var connection = Configuration["MySQLConnection:MySQLConnectionString"];
 
-            services.AddDbContext<DBContext>(options => options.UseMySql(connection));
+            services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
 
             if (Environment.IsDevelopment())
             {
@@ -53,11 +52,6 @@ namespace RestApisWithAspNet
             services.AddScoped<IBookBusiness, BookBusinessImplementation>();
 
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
-
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "RestApisWithAspNet", Version = "v1" });
-            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,8 +60,6 @@ namespace RestApisWithAspNet
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RestApisWithAspNet v1"));
             }
 
             app.UseHttpsRedirection();

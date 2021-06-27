@@ -9,10 +9,10 @@ namespace RestApisWithAspNet.Repository.Generic
 {
     public class GenericRepository<T> : IRepository<T> where T : BaseEntity
     {
-        private DbContext _context;
+        private MySQLContext _context;
 
         private DbSet<T> dataset;
-        public GenericRepository(DbContext context)
+        public GenericRepository(MySQLContext context)
         {
             _context = context;
             dataset = _context.Set<T>();

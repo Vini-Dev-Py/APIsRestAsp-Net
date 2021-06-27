@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using System;
 using RestApisWithAspNet.Model.Base;
 
 namespace RestApisWithAspNet.Model
