@@ -12,6 +12,8 @@ using Serilog;
 using System;
 using System.Collections.Generic;
 using RestApisWithAspNet.Repository.Generic;
+using RestApisWithAspNet.Hypermedia.Filters;
+using RestApisWithAspNet.Hypermedia.Enricher;
 
 namespace RestApisWithAspNet
 {
@@ -45,6 +47,11 @@ namespace RestApisWithAspNet
                 MigrateDatabase(connection);
             }
 
+            var filterOptions = new HyperMediaFilterOptions();
+            filterOptions.ContentResponseEnricherList.Add(new PersonEnricher());
+
+            services.AddSingleton(filterOptions);
+
             services.AddApiVersioning();
 
             // Dependecy Injection
@@ -71,6 +78,7 @@ namespace RestApisWithAspNet
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapControllerRoute("DefaultAPi", "{controller=values}/{id?}");
             });
         }
 
