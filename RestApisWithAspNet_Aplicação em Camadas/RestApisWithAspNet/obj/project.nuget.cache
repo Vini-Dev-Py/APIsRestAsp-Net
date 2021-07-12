@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LgBMCp1p5v3THEWPOltjvViHrb59ls1Xc0aTtNVFEWfi/PsWZuR0R0VUPhgkXdS1ZVt82n5wYEQtjL0t/FLFjg==",
+  "dgSpecHash": "ttwnmHqui/x8+NPOxTDf0slt0tlw80t7/SyU2mDIjwp7rOq6TuM60M9n7QIka3A+tBUjiy0+LLt3vzBPTVz2Bg==",
   "success": true,
   "projectFilePath": "C:\\Programação\\NewGitHub\\APIsRestAsp-Net\\RestApisWithAspNet_Aplicação em Camadas\\RestApisWithAspNet\\RestApisWithAspNet.csproj",
   "expectedPackageFiles": [
@@ -47,10 +47,10 @@
     "C:\\Users\\User\\.nuget\\packages\\serilog.sinks.console\\3.1.1\\serilog.sinks.console.3.1.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\serilog.sinks.debug\\1.0.1\\serilog.sinks.debug.1.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\serilog.sinks.file\\4.1.0\\serilog.sinks.file.4.1.0.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.1\\swashbuckle.aspnetcore.5.6.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.1\\swashbuckle.aspnetcore.swagger.5.6.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.1\\swashbuckle.aspnetcore.swaggergen.5.6.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.1\\swashbuckle.aspnetcore.swaggerui.5.6.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",

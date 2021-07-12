@@ -14,6 +14,8 @@ using System.Collections.Generic;
 using RestApisWithAspNet.Repository.Generic;
 using RestApisWithAspNet.Hypermedia.Filters;
 using RestApisWithAspNet.Hypermedia.Enricher;
+using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Rewrite;
 
 namespace RestApisWithAspNet
 {
@@ -54,6 +56,21 @@ namespace RestApisWithAspNet
 
             services.AddApiVersioning();
 
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Rest API From 0 to Azure",
+                    Version = "v1",
+                    Description = "API Restful developed in course",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Vinicius Batista",
+                        Url = new Uri("https://github.com/vini-dev-py")
+                    }
+                });
+            });
+
             // Dependecy Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
             services.AddScoped<IBookBusiness, BookBusinessImplementation>();
@@ -72,6 +89,18 @@ namespace RestApisWithAspNet
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c => 
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json",
+                    "REST API ASP.NET Core");
+            });
+
+            var option = new RewriteOptions();
+            option.AddRedirect("^$", "swagger");
+            app.UseRewriter(option);
 
             app.UseAuthorization();
 

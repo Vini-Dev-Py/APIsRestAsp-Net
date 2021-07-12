@@ -4,6 +4,7 @@ using RestApisWithAspNet.Model;
 using RestApisWithAspNet.Business;
 using RestApisWithAspNet.Data.VO;
 using RestApisWithAspNet.Hypermedia.Filters;
+using System.Collections.Generic;
 
 namespace RestApisWithAspNet.Controllers
 {
@@ -24,6 +25,7 @@ namespace RestApisWithAspNet.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType((200), Type = typeof(List<PersonVO>))]
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
